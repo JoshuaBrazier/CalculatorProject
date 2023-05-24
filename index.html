@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS & JS Calculator Project</title>
+</head>
+<body onmousemove="backgroundChanger(event)">
+    <audio src="Introduction.mp3" id="introductionSound"></audio>
+    <audio src="buttonClicked.mp3" id="testSound"></audio>
+    <header id="header-text">Welcome to my calculator app!</header>
+    <div id="central-container">
+        <div id="text-field-container">
+            <input type='text' id='text-field'></input>
+        </div>
+        <div id="button-panel">
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="*">*</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="/">/</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="+">+</button>
+            <button id="0">0</button>
+            <button id=".">.</button>
+            <button id="evaluateButton">=</button>
+            <button id="-">-</button>
+        </div>
+        <button id="clear-button">Clear</button>
+    </div>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="index.js" type="text/javascript">
+        function backgroundChanger(e) {
+            const numberOne = Math.round(Math.random() * 255);
+            const numberTwo = Math.round(Math.random() * 255);
+            const numberThree = Math.round(Math.random() * 255);
+            document.body.style.backgroundColor = `rgb(${numberOne}, ${numberTwo}, ${numberThree})`;
+        }
+    </script>
+</body>
+</html>
